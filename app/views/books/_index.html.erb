@@ -17,6 +17,7 @@
         <td><%= link_to book.title,book, class: "book_#{book.id}" %></td>
         <td><%= book.body %></td>
         <td id="favorite_buttons_<%= book.id %>"><%= render 'favorites/favorite', book: book %></td>
+        <td><p class="view-count">閲覧数：<%= book.view_counts.count %></td>
       </tr>
     <% end %>
   </tbody>
